@@ -27,6 +27,17 @@ public class JobForm {
         with correct validation attributes and display names.
         Don't forget to add getters and setters
      */
+    @Size(min=2, max=30)
+    private String street;
+
+    @Size(min=2, max=30)
+    private String city;
+
+    @Size(min=2, max=30)
+    private String state;
+
+    @Size(min=2, max=30)
+    private String country;
 
     private ArrayList<Employer> employers;
     private ArrayList<Location> locations;
@@ -43,6 +54,38 @@ public class JobForm {
 
         employers = jobData.getEmployers().findAll();
 
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 
     public String getName() {
@@ -93,3 +136,5 @@ public class JobForm {
         this.positionTypes = positionTypes;
     }
 }
+
+

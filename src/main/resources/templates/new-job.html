@@ -26,6 +26,10 @@
         </div>
 
         <!-- TODO #5 - Create <select> dropdowns for other job fields -->
+        <select th:field="*{empolyee}">
+            <option th:value="Street" th:text="Street"></option>
+            <option th:value="City" th:text="City"></option>
+        </select>
 
         <input type="submit" value="Add Job" />
     </form>
